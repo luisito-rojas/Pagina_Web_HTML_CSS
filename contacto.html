@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Icono-->
+    <link rel="shortcut icon" href="img/Imagenes/LR2.png">
+    <!--el normalize va antes del enlace a css-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--enlace de font awesome cdnjs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--Hoja de estilos css-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header >
+        <h1 class="nombre-sitio">Tienda de <span> Muebles </span> </h1>
+    </header>
+
+    <div class="contenedor-navegacion"> 
+    <nav class="nav-principal contenedor"> 
+        <a href="index.html">Inicio </a>
+        <a href="nosotros.html">Nosotros </a>
+        <a href="tienda.html">Tienda </a>
+        <a href="blog.html">Blog </a>
+        <a href="galeria.html">Galeria </a>          
+        <a href="contacto.html">Contacto </a>
+    </nav>
+    </div>
+
+    
+    
+
+
+    <main class="contenido-principal contenedor">      
+        <h2 class=text-center > Contacto </h2>
+
+        <!--Comienzo del input-->
+        <form class="formulario">
+            <!--Esta etiqueta nos permite agrupar informacion del mismo tipo-->
+            <fieldset>  
+                <!--Para darle un titulo a nuestro campo-->
+                <legend>Tus Datos</legend>
+                <div class="campo">  
+                <!--El for y el id deben de llevar lo mismo-->
+                <label for="nombre">Nombre</label>
+                <input  class="input" id="nombre"  type="text" placeholder="Ingresa tu nombre" required>
+                </div>
+
+                <div class="campo">
+                <label for="asunto">Asunto</label>
+                <input id="asunto"  type="text" placeholder="Tu Asunto" required>
+                </div>
+
+                <div class="campo">
+                     <!--Con el type = email cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera la tecla del @ en el telefono -->
+                <label for="email">Email</label>
+                <input id="email"  type="email" placeholder="Tu Email" required>
+                </div>
+
+                 <div class="campo">
+                     <!--Con el type =tel cuando veamos la pagina en un cel y queramos llenar este campo aparecera los nuemros en el telefono -->
+                <label for="tel">Telefono</label>
+                <input id="tel"  type="tel" placeholder="Tu Telefono" required>
+                </div>
+
+<!-- 
+                 <div class="campo">
+                     <Con el type =date cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un calendario en el telefono 
+                <label for="date">Fecha</label>
+                <input id="date"  type="date" placeholder="Fecha" required>
+                </div>
+
+                <div class="campo">
+                     Con el type =date cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un reloj en el telefono 
+                <label for="time">Hora</label>
+                <input id="time"  type="time" placeholder="Hora" required>
+                </div>
+
+                <div class="campo">
+                     Con el type =datetime-local cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un reloj y un calendario en el telefono 
+                <label for="datetime-local">Hora y Fecha</label>
+                <input id="datetime-local"  type="datetime-local" placeholder="Hora y Fecha" required>
+                </div>
+
+                
+                <div class="campo">
+                     Con el type =datetime-local cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un reloj y un calendario en el telefono 
+                <label for="file">Archivo</label>
+                <input id="file"  type="file" placeholder="Archivo" required>
+                </div>
+
+                
+                <div class="campo">
+                      Con el type =datetime-local cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un reloj y un calendario en el telefono 
+                <label for="password">Contraseña</label>
+                <input id="password"  type="Password" placeholder="Tu Contraseña" required>
+                </div>
+                -->
+
+                <div class="campo">
+                      <!--Con el type =datetime-local cuando veamos la pagina en un cel y queramos llenar este campo  nos aparecera un reloj y un calendario en el telefono --> 
+                <label for="campo">Mensaje </label>
+               <textarea  cols="30" rows="10"></textarea>
+                </div>
+                
+
+             </fieldset>
+<!--------------------------------------->
+             <fieldset>
+                 <legend>Pais</legend>
+                 <div class="campo">
+                      
+                <label for="contraseña">Contraseña</label>
+                <input id="contraseña" type="text" placeholder="Tu Contraseña">
+                </div>
+
+             </fieldset>
+
+<!--------------------------------------->
+             <fieldset>
+                <legend>Informacion Extra</legend>
+
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input id="cliente "type="radio" name="tipo">
+                </div>
+
+                <div class="campo">
+                    <label for="proveedor">Proveedor</label>
+                    <input id="proveedor "type="radio" name="tipo">
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categorias de Interes</label>
+                    <input list="categorias" name="categorias">
+                    <datalist id="categorias" >
+                        <option value="Cocina">
+                        <option value="Exterior">
+                        <option value="Recamaras">
+                        <option value="Oficina">
+                        <option value="Television">
+                    </datalist>
+                    
+
+
+                </div>
+                
+             </fieldset>
+
+             <input  class="btn" type="submit" value="Enviar Formulario">
+        </form>
+        
+     </main>
+
+
+     <footer class="site-footer">
+        <div class="grid-footer contenedor">
+
+            <div>
+                    <h3>Categorias </h3>
+
+                    <nav class="footer-menu" >
+                        <a href="#">Cocina </a>
+                        <a href="#">Oficina </a>
+                        <a href="#">Jardin </a>
+                        <a href="#">Cochera </a>
+                        <a href="#">Dormitorio </a>
+                    </nav>
+            </div>
+
+            <div>
+                    <h3>Sobre Nosotros </h3>
+
+                    <nav class="footer-menu">
+                        <a href="#">Nuestra Historia </a>
+                        <a href="#">Mision,Vision,Valores </a>
+                        <a href="#">Carreras </a>
+                        <a href="#">Politica de Privacidad </a>
+                        <a href="#">Terminos del Servicio </a>
+                    </nav>
+            </div>
+
+            <div>
+                    <h3>Soporte </h3>
+
+                    <nav  class="footer-menu">
+                        <a href="#">Preguntas Frecuentes  </a>
+                        <a href="#">Ayuda en Linea  </a>
+                        <a href="#">Confianza y Seguridad </a>
+                    </nav>
+            </div>
+
+        </div>
+
+
+        <!--Espacio para las redes sociales,aqui vamos a insertas los logos de las redes sociales-->
+        <section class="social">
+            <p>Sigueme en mis redes sociales</p> 
+            <div class="links">
+                 <!--Aqui vamos a sacar las imagenes sacadas desde fonts awesome-->
+                <a href="https://www.facebook.com/luisito.rojassalazar/"  target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+               
+                <a href="https://www.instagram.com/luisillorojas/?hl=en" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/luisito-rojas" target="_blank">
+                    <i class="fab fa-github" ></i>
+                </a>
+            </div>
+
+        </section>
+
+
+
+
+
+         <p class="copyright"> Todos los derechos reservados por  
+             &COPY; Luis Rojas </p>
+
+     </footer>
+
+</body>
+</html>

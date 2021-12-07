@@ -1,0 +1,452 @@
+/*.-------------Cada que hagamos una pagina es recomendabke agregarle este codigo y aaparte el normalize---------------------------------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    /*esto espara que 10px sean igual a1*/
+    font-size: 62.5%;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/**********************************************Globales*******************************************************/
+h1, h2, h3 {
+    margin: 0, 0, 5rem, 0;
+}
+
+h1 {
+
+    font-size: 5rem;
+}
+
+h2 {
+
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 10px;
+    /*el transition nos pide tres datos 1-que es lo que queremos animar, en cuanto tiempo y el efecto */
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #769c02;
+    cursor: pointer;
+}
+
+/**************UTILIDADES*********************************************/
+.text-center {
+    text-align: center;
+}
+
+.max-width-30 {
+    max-width: 30rem;
+}
+
+/*Header y navegacion*/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-navegacion {
+    /*Para que solo nos haga una linea en la parte de arriba de nuestro nav*/
+    border-top: .1rem solid #e1e1e1;
+}
+
+
+.nav-principal {
+    font-size: 2rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.hero {
+    background-image: url(../img/Imagenes/principal.jpg);
+    /*Para que no se repita*/
+    background-repeat: no-repeat;
+    /*para escoger que parte de la imagen queremos que se muestre*/
+    background-position: center center;
+    /*para que cubra toda la pantalla*/
+    block-size: cover;
+    /*Altura de la imagen*/
+    height: 55rem;
+}
+
+/*Categorias*/
+.categorias {
+    padding-top: 5rem;
+}
+
+/*Los enlaces (a) son inLine por lo que tenems que convertirlo a block para que se pueda centrar*/
+.categoria a {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.categoria a:hover {
+    background: #037bc0;
+    color: #fff;
+    border-radius: 0 0 1rem 1rem;
+
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+/*Bloque Sobre Nosotros*/
+/*
+-linerar gradient siempre se usa con background-image
+-linear gradient es un degradado lineal y en  los parentesis le tenemos que decir hacia donde va a ir (de) color porcentaje,(hasta ) color porcentaje
+
+*/
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/Imagenes/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    /*Todas las imagenes por defecto se repiten*/
+    background-repeat: no-repeat;
+    block-size: 100%, 120rem;
+}
+
+/*esta clase es para colocar el centro a ña izquierda dentro del recuadro azul*/
+.sobre-nosotros-grid {
+    display: grid;
+    /*Hacemos 2 columnas*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    color: #fff;
+}
+
+.texto-nosotros {
+    display: grid;
+    grid-column: 2/3;
+}
+
+/*Listado de productos*/
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+/*posicionamos las imagenes*/
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+.producto:nth-child(1) {
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+    height: 61rem;
+    width: 100%;
+    object-fit: fill;
+}
+
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: -1;
+}
+
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: -1;
+}
+
+.producto {
+    background: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900s;
+}
+
+/*
+.producto img:hover{
+    transform: scale(.8);
+}
+*/
+
+/*footer*/
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding: 5rem;
+
+
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a {
+    display: block;
+}
+
+/*Redes Sociales*/
+
+/* Social... (Aqui vamos a empezar a manipular nuestros iconos de redes sociales)*/
+.social {
+
+    border-top: .1rem solid #e1e1e1;
+    /*le vamos a poner un margen para todos los lados (arriba,abajo y hacia los lados*/
+    margin: 50px;
+}
+
+.social p {
+    font-weight: 700;
+    font-size: 4rem;
+    /*vamos a alinear al centro y aumentar el tamaño de la letra de "Follow DeporTech"*/
+    text-align: center;
+    /*Aui le vamos a poner un margen para que se vea como un titulo*/
+    margin-bottom: 20px;
+
+
+}
+
+/*Vamos a manipular los logos de las redes sociales*/
+.links {
+    /*Vamos a centrar los logos abajo del "Follow DeporTech"*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+/*Aqui le vamos a poner un argen de 0 arriba y abajo, y 30 hacia los lados*/
+.links a {
+    margin: 3rem;
+}
+
+.links a:hover {
+    transform: scale(1.5);
+}
+
+/*Alos iconos les vamos a aumentar el tamaño*/
+.links a i {
+    font-size: 3rem;
+    color: #037bc0;
+}
+
+
+
+/*-------------------------------*/
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/*Nosotros*/
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Nuestro Blog*/
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.entrada {
+    border-bottom: .2rem solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+/*con esto eliminamos la ultima linea*/
+.entrada:last-of-type {
+    border-bottom: none;
+}
+
+/*Estilos para el texto que esta debajo de las imagenes*/
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.entrada-meta p {
+    font-weight: 900;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+/*Blog Entrada*/
+.contenido-entrada-blog {
+    text-align: justify;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.galeria {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/*----------Formulario-------------*/
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+/*elemento padre*/
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
